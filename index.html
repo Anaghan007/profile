@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -42,7 +42,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   cursor: none;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* Film Grain */
@@ -146,7 +146,7 @@ body {
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -182,7 +182,7 @@ body {
 
 .label {
   font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -190,15 +190,7 @@ body {
   line-height: 1.4;
 }
 
-.text-body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--ink-dim);
-}
-
-/* ROYAL CROWN SVG */
+/* Crown SVG */
 .crown-svg {
   width: 60px;
   height: 60px;
@@ -211,7 +203,7 @@ body {
   height: 100px;
 }
 
-/* ROYAL INTRO - Premium Design */
+/* ROYAL INTRO */
 .intro {
   position: fixed;
   inset: 0;
@@ -293,11 +285,12 @@ body {
   animation: fadeUp 1.2s ease-out 1s forwards;
   text-shadow: 0 0 30px rgba(212, 165, 116, 0.3);
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .intro-subtitle {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   color: var(--ink-dim);
   letter-spacing: 0.1em;
   text-align: center;
@@ -305,17 +298,18 @@ body {
   animation: fadeUp 1s ease-out 1.5s forwards;
   margin-bottom: 40px;
   font-weight: 500;
+  padding: 0 20px;
 }
 
 .intro-chapter {
   font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--gold);
   opacity: 0;
   animation: fadeUp 1s ease-out 2s forwards;
-  padding: 10px 25px;
+  padding: 12px 28px;
   border: 1px solid rgba(212, 165, 116, 0.3);
   border-radius: 100px;
   font-weight: 600;
@@ -333,14 +327,13 @@ body {
 /* SECTIONS */
 section {
   position: relative;
-  min-height: 100vh;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* HERO - Properly Centered */
+/* HERO - PERFECTLY CENTERED */
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
@@ -350,6 +343,7 @@ section {
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding: 0;
 }
 
 .hero-bg {
@@ -380,7 +374,7 @@ section {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 30px;
+  padding: 20px 24px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -392,7 +386,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp 1s ease-out 0.5s forwards;
 }
@@ -401,13 +395,13 @@ section {
 .hero-est::after {
   content: '✦';
   color: var(--gold);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .hero-title {
   font-size: clamp(3.5rem, 12vw, 10rem);
   line-height: 0.95;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   overflow: hidden;
   letter-spacing: -0.03em;
   width: 100%;
@@ -433,14 +427,15 @@ section {
 
 .hero-tagline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
   color: var(--ink-dim);
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp 1s ease-out 1.4s forwards;
   font-weight: 500;
   line-height: 1.5;
   max-width: 600px;
+  padding: 0 10px;
 }
 
 .hero-royal-line {
@@ -448,7 +443,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 25px 0;
+  margin: 20px 0;
   opacity: 0;
   animation: fadeUp 1s ease-out 1.6s forwards;
   width: 100%;
@@ -465,15 +460,15 @@ section {
 
 .hero-royal-line .crest {
   color: var(--gold);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .hero-meta {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--ink-dim);
@@ -527,7 +522,7 @@ section {
 
 .chapter-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   margin-bottom: 15px;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -536,7 +531,7 @@ section {
 
 .chapter-subtitle {
   font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);
@@ -559,7 +554,7 @@ section {
 }
 
 .chapter-ornament .fleur {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* ABOUT */
@@ -626,7 +621,7 @@ section {
   content: '✦';
   position: absolute;
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   background: var(--bg);
   padding: 2px 5px;
 }
@@ -661,7 +656,7 @@ section {
 
 .about-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
   line-height: 1.05;
   margin-bottom: 30px;
   font-weight: 600;
@@ -669,7 +664,7 @@ section {
 }
 
 .about-text {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.9;
   color: var(--ink-dim);
   max-width: 520px;
@@ -698,7 +693,7 @@ section {
   color: var(--gold);
   background: var(--bg);
   padding: 0 15px;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .info-row {
@@ -709,7 +704,7 @@ section {
   border-bottom: 1px solid rgba(212, 165, 116, 0.1);
   transition: all 0.3s;
   cursor: default;
-  gap: 15px;
+  gap: 20px;
 }
 
 .info-row:hover {
@@ -720,7 +715,7 @@ section {
 
 .info-key {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
@@ -731,7 +726,7 @@ section {
 
 .info-value {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: var(--ink);
   text-align: right;
   font-weight: 600;
@@ -770,12 +765,12 @@ section {
 
 .pullquote-ornament-top .fleur,
 .pullquote-ornament-bottom .fleur {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .pullquote-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-size: clamp(1.9rem, 4.8vw, 3.25rem);
   line-height: 1.4;
   color: var(--ink);
   position: relative;
@@ -800,7 +795,7 @@ section {
 .pullquote-attr {
   margin-top: 30px;
   font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);
@@ -875,7 +870,7 @@ section {
   bottom: 25px;
   left: 25px;
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
@@ -909,7 +904,7 @@ section {
 
 .cast-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
   line-height: 1.1;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -917,8 +912,8 @@ section {
 
 .cast-desc {
   color: var(--ink-dim);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.85;
   max-width: 440px;
   font-weight: 400;
 }
@@ -926,7 +921,7 @@ section {
 .cast-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   padding-top: 20px;
   border-top: 1px solid rgba(212, 165, 116, 0.3);
   position: relative;
@@ -940,15 +935,15 @@ section {
   color: var(--gold);
   background: var(--bg);
   padding-right: 10px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .cast-detail {
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .cast-detail-key {
@@ -956,7 +951,7 @@ section {
   color: var(--gold);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   flex-shrink: 0;
   white-space: nowrap;
@@ -964,7 +959,7 @@ section {
 
 .cast-detail-value {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: right;
   flex: 1;
@@ -1038,7 +1033,7 @@ section {
 
 .timeline-year {
   font-family: 'Cinzel', serif;
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(3.25rem, 7.5vw, 5.25rem);
   color: var(--gold);
   line-height: 1;
   margin-bottom: 15px;
@@ -1049,7 +1044,7 @@ section {
 
 .timeline-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 20px;
   line-height: 1.15;
   font-weight: 600;
@@ -1058,8 +1053,8 @@ section {
 
 .timeline-desc {
   color: var(--ink-dim);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.85;
   margin-bottom: 25px;
   font-weight: 400;
 }
@@ -1067,7 +1062,7 @@ section {
 .timeline-meta {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   padding-top: 20px;
   border-top: 1px solid rgba(212, 165, 116, 0.2);
 }
@@ -1075,25 +1070,25 @@ section {
 .meta-row {
   display: flex;
   gap: 15px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   align-items: baseline;
   flex-wrap: wrap;
 }
 
 .meta-row .key {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 600;
-  min-width: 90px;
+  min-width: 95px;
   flex-shrink: 0;
 }
 
 .meta-row .value {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 600;
   flex: 1;
 }
@@ -1138,7 +1133,7 @@ section {
 
 .finale-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 9vw, 7rem);
+  font-size: clamp(3.25rem, 9.5vw, 7.5rem);
   line-height: 0.95;
   margin-bottom: 30px;
   font-weight: 600;
@@ -1147,7 +1142,7 @@ section {
 
 .finale-subtitle {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--ink-dim);
   margin-bottom: 50px;
   font-weight: 500;
@@ -1173,7 +1168,7 @@ section {
   color: var(--gold);
   background: var(--bg);
   padding: 0 20px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .contact-row {
@@ -1220,15 +1215,15 @@ section {
 }
 
 .contact-icon {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border: 1px solid var(--gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--gold);
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.4s;
   flex-shrink: 0;
 }
@@ -1247,7 +1242,7 @@ section {
 
 .contact-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1257,14 +1252,14 @@ section {
 
 .contact-value {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   word-break: break-word;
 }
 
 .contact-arrow {
   color: var(--gold);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: transform 0.4s;
   flex-shrink: 0;
 }
@@ -1304,7 +1299,7 @@ footer {
 
 .footer-credits {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--ink-dim);
@@ -1314,7 +1309,7 @@ footer {
 
 .footer-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   color: var(--gold);
   font-weight: 600;
   margin-bottom: 10px;
@@ -1322,7 +1317,7 @@ footer {
 
 .footer-motto {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--ink-dim);
   font-weight: 400;
 }
@@ -1366,7 +1361,7 @@ footer {
   color: var(--ink-dim);
   text-decoration: none;
   font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 10px 12px;
@@ -1416,39 +1411,39 @@ footer {
 }
 
 /* ============================================
-   UNIVERSAL MEDIA QUERIES
+   UNIVERSAL MEDIA QUERIES - ENHANCED TYPOGRAPHY
 ============================================ */
 
-/* Small Phones (< 480px) - IMPROVED TYPOGRAPHY */
+/* Small Phones (< 480px) - BIGGER TEXT */
 @media (max-width: 479px) {
   body { 
     padding-bottom: 90px; 
     cursor: auto; 
-    font-size: 15px;
+    font-size: 16px;
   }
   .cursor-ring, .cursor-dot { display: none; }
   .chapter-indicator { display: none; }
   
   /* Intro */
-  .intro-crown .crown-svg { width: 60px; height: 60px; }
-  .intro-title { font-size: 1.75rem; letter-spacing: 0.1em; }
-  .intro-subtitle { font-size: 0.95rem; padding: 0 20px; }
-  .intro-chapter { font-size: 0.65rem; padding: 8px 16px; }
+  .intro-crown .crown-svg { width: 70px; height: 70px; }
+  .intro-title { font-size: 1.85rem; letter-spacing: 0.1em; }
+  .intro-subtitle { font-size: 1.05rem; padding: 0 20px; }
+  .intro-chapter { font-size: 0.7rem; padding: 10px 18px; }
   
-  /* Hero - PERFECTLY CENTERED */
+  /* HERO - PERFECTLY CENTERED, NO TOP PADDING */
   .hero { 
-    padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    padding: 0;
   }
   .hero-content { 
-    padding: 30px 20px; 
+    padding: 20px 20px; 
   }
-  .hero-title { font-size: 3rem; margin-bottom: 20px; }
-  .hero-tagline { font-size: 1rem; margin-bottom: 20px; }
+  .hero-title { font-size: 3.25rem; margin-bottom: 18px; }
+  .hero-tagline { font-size: 1.1rem; margin-bottom: 18px; }
   .hero-meta { 
-    gap: 15px; 
-    font-size: 0.65rem; 
+    gap: 14px; 
+    font-size: 0.7rem; 
     letter-spacing: 0.15em;
     padding: 0 10px;
   }
@@ -1467,12 +1462,13 @@ footer {
   .pullquote { padding: 70px 20px; }
   .finale-content { padding: 60px 20px; }
   
-  /* About */
+  /* About - BIGGER */
   .about-photo-wrap { max-width: 280px; }
-  .about-title { font-size: 2rem; }
-  .about-text { font-size: 1rem; }
+  .about-title { font-size: 2.25rem; }
+  .about-text { font-size: 1.05rem; }
+  .label { font-size: 0.72rem; }
   
-  /* Info Table - FIXED WRAPPING */
+  /* Info Table - FIXED, BIGGER TEXT */
   .info-table { 
     grid-template-columns: 1fr; 
   }
@@ -1480,75 +1476,75 @@ footer {
   .info-row { 
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     padding: 14px 10px;
     flex-wrap: nowrap;
   }
   
   .info-key { 
-    font-size: 0.65rem;
-    min-width: 85px;
+    font-size: 0.7rem;
+    min-width: 90px;
     letter-spacing: 0.1em;
   }
   
   .info-value { 
     text-align: right; 
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   
-  /* Cast */
+  /* Cast - BIGGER */
   .cast-photo-wrap { max-width: 280px; }
-  .cast-name { font-size: 1.75rem; }
-  .cast-desc { font-size: 0.95rem; }
-  .cast-number { font-size: 3.5rem; }
+  .cast-name { font-size: 2rem; }
+  .cast-desc { font-size: 1.05rem; }
+  .cast-number { font-size: 3.75rem; }
   
   .cast-detail { 
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
   .cast-detail-key { 
-    font-size: 0.65rem;
-    min-width: 80px;
+    font-size: 0.7rem;
+    min-width: 85px;
   }
   .cast-detail-value { 
     text-align: right; 
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   
-  /* Timeline */
-  .timeline-year { font-size: 2.25rem; }
-  .timeline-title { font-size: 1.5rem; }
-  .timeline-desc { font-size: 0.95rem; }
+  /* Timeline - BIGGER */
+  .timeline-year { font-size: 2.5rem; }
+  .timeline-title { font-size: 1.65rem; }
+  .timeline-desc { font-size: 1.05rem; }
   
   .meta-row { 
     flex-direction: row;
-    gap: 8px;
-    font-size: 0.9rem;
+    gap: 10px;
+    font-size: 0.95rem;
   }
   .meta-row .key { 
-    min-width: 75px;
-    font-size: 0.65rem;
+    min-width: 80px;
+    font-size: 0.7rem;
   }
-  .meta-row .value { font-size: 0.95rem; }
+  .meta-row .value { font-size: 1rem; }
   
-  /* Contact */
+  /* Contact - BIGGER */
   .contact-row { 
-    padding: 20px 15px;
+    padding: 22px 15px;
     gap: 12px;
   }
   .contact-icon { 
-    width: 40px; 
-    height: 40px;
-    font-size: 0.9rem;
+    width: 44px; 
+    height: 44px;
+    font-size: 1rem;
   }
-  .contact-label { font-size: 0.65rem; }
-  .contact-value { font-size: 1.05rem; }
+  .contact-label { font-size: 0.7rem; }
+  .contact-value { font-size: 1.15rem; }
   
-  /* Pullquote */
+  /* Pullquote - BIGGER */
   .pullquote-text { 
     padding: 0 15px; 
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .pullquote-text::before { 
     left: 0; 
@@ -1557,14 +1553,14 @@ footer {
   }
   
   /* Chapter */
-  .chapter-number { font-size: 4rem; }
-  .chapter-crown { font-size: 1.5rem; }
-  .chapter-title { font-size: 1.75rem; }
+  .chapter-number { font-size: 4.5rem; }
+  .chapter-crown { font-size: 1.7rem; }
+  .chapter-title { font-size: 1.9rem; }
   
   /* Footer */
-  footer { padding: 40px 20px; }
-  .footer-title { font-size: 1.3rem; }
-  .footer-motto { font-size: 0.85rem; }
+  footer { padding: 45px 20px; }
+  .footer-title { font-size: 1.5rem; }
+  .footer-motto { font-size: 0.95rem; }
 }
 
 /* Medium Phones (480px - 767px) */
@@ -1572,18 +1568,18 @@ footer {
   body { 
     padding-bottom: 90px; 
     cursor: auto;
-    font-size: 16px;
+    font-size: 17px;
   }
   .cursor-ring, .cursor-dot { display: none; }
   .chapter-indicator { display: none; }
   
   .hero { 
-    padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    padding: 0;
   }
-  .hero-content { padding: 40px 24px; }
-  .hero-title { font-size: 4rem; }
+  .hero-content { padding: 20px 24px; }
+  .hero-title { font-size: 4.25rem; }
   
   section { min-height: auto; display: block; }
   
@@ -1601,11 +1597,11 @@ footer {
   .info-row {
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     padding: 16px 12px;
   }
   .info-value { text-align: right; }
-  .info-key { min-width: 90px; }
+  .info-key { min-width: 95px; }
   
   .cast-photo-wrap { max-width: 320px; }
   .about-photo-wrap { max-width: 340px; }
@@ -1615,15 +1611,15 @@ footer {
 
 /* Tablets (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  body { padding-bottom: 0; font-size: 16px; }
+  body { padding-bottom: 0; font-size: 17px; }
   .mobile-nav { display: none; }
   
   .hero { 
-    padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    padding: 0;
   }
-  .hero-content { padding: 50px 40px; }
+  .hero-content { padding: 30px 40px; }
   
   section { min-height: auto; display: block; }
   
@@ -1637,10 +1633,10 @@ footer {
   .info-row {
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 22px;
   }
   .info-value { text-align: right; }
-  .info-key { min-width: 110px; }
+  .info-key { min-width: 115px; }
   
   .cast-member {
     grid-template-columns: 1fr 1fr;
@@ -1681,13 +1677,13 @@ footer {
 
 /* Small Laptops (1024px - 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
-  body { padding-bottom: 0; font-size: 16px; }
+  body { padding-bottom: 0; font-size: 17px; }
   .mobile-nav { display: none; }
   
   .hero { 
-    padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    padding: 0;
   }
   
   .about {
@@ -1700,10 +1696,10 @@ footer {
   .info-row {
     flex-direction: row;
     align-items: center;
-    gap: 25px;
+    gap: 28px;
   }
   .info-value { text-align: right; }
-  .info-key { min-width: 120px; }
+  .info-key { min-width: 125px; }
   
   .cast-member {
     grid-template-columns: 1fr 1fr;
@@ -1746,13 +1742,13 @@ footer {
 
 /* Standard Desktops (1280px - 1919px) */
 @media (min-width: 1280px) and (max-width: 1919px) {
-  body { padding-bottom: 0; font-size: 16px; }
+  body { padding-bottom: 0; font-size: 17px; }
   .mobile-nav { display: none; }
   
   .hero { 
-    padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    padding: 0;
   }
   
   .about {
@@ -1769,11 +1765,11 @@ footer {
   .info-row {
     flex-direction: row;
     align-items: center;
-    gap: 35px;
+    gap: 38px;
     padding: 20px;
   }
-  .info-value { text-align: right; font-size: 1.2rem; }
-  .info-key { min-width: 130px; }
+  .info-value { text-align: right; font-size: 1.3rem; }
+  .info-key { min-width: 135px; }
   
   .cast-member {
     grid-template-columns: 1fr 1fr;
@@ -1821,13 +1817,13 @@ footer {
 
 /* Large Desktops (1920px+) */
 @media (min-width: 1920px) {
-  body { padding-bottom: 0; font-size: 17px; }
+  body { padding-bottom: 0; font-size: 18px; }
   .mobile-nav { display: none; }
   
   .hero { 
-    padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    padding: 0;
   }
   
   .about {
@@ -1853,11 +1849,11 @@ footer {
   .info-row {
     flex-direction: row;
     align-items: center;
-    gap: 45px;
+    gap: 48px;
     padding: 22px 25px;
   }
-  .info-value { text-align: right; font-size: 1.3rem; }
-  .info-key { min-width: 150px; font-size: 0.75rem; }
+  .info-value { text-align: right; font-size: 1.4rem; }
+  .info-key { min-width: 155px; font-size: 0.8rem; }
   
   .cast-member {
     grid-template-columns: 1fr 1fr;
@@ -1905,7 +1901,7 @@ footer {
 
 /* 4K Displays (2560px+) */
 @media (min-width: 2560px) {
-  body { font-size: 18px; }
+  body { font-size: 19px; }
   .about-wrapper, .cast-wrapper, .timeline-wrapper { max-width: 1800px; }
   .hero-content, .finale-content { max-width: 1400px; }
 }
@@ -1917,10 +1913,10 @@ footer {
     padding: 80px 30px 60px;
   }
   
-  .hero-title { font-size: 3rem; }
+  .hero-title { font-size: 3.25rem; }
   
   .chapter-divider { padding: 50px 30px; }
-  .chapter-number { font-size: 3.5rem; }
+  .chapter-number { font-size: 3.75rem; }
   
   section { min-height: auto; }
 }
@@ -1946,7 +1942,7 @@ footer {
 </head>
 
 <body>
-<!-- ROYAL INTRO - Premium Design -->
+<!-- ROYAL INTRO -->
 <div class="intro" id="intro">
   <div class="intro-ornament">
     <span class="intro-ornament-line"></span>
