@@ -63,23 +63,10 @@
     }
 
     @keyframes grainShift {
-
-      0%,
-      100% {
-        transform: translate(0, 0);
-      }
-
-      25% {
-        transform: translate(-2%, 3%);
-      }
-
-      50% {
-        transform: translate(3%, -2%);
-      }
-
-      75% {
-        transform: translate(-3%, -3%);
-      }
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(-2%, 3%); }
+      50% { transform: translate(3%, -2%); }
+      75% { transform: translate(-3%, -3%); }
     }
 
     /* Custom Cursor */
@@ -294,6 +281,10 @@
       border-radius: 100px;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      white-space: nowrap;
+      max-width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     /* Intro */
@@ -324,17 +315,8 @@
     }
 
     @keyframes introGlow {
-
-      0%,
-      100% {
-        opacity: 0.5;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.1);
-      }
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
     }
 
     .intro-ornament {
@@ -355,15 +337,8 @@
     }
 
     @keyframes expandLine {
-      from {
-        width: 0;
-        opacity: 0;
-      }
-
-      to {
-        width: 60px;
-        opacity: 1;
-      }
+      from { width: 0; opacity: 0; }
+      to { width: 60px; opacity: 1; }
     }
 
     .intro-ornament-star {
@@ -373,15 +348,8 @@
     }
 
     @keyframes rotateStar {
-      from {
-        transform: rotate(-180deg) scale(0);
-        opacity: 0;
-      }
-
-      to {
-        transform: rotate(0) scale(1);
-        opacity: 1;
-      }
+      from { transform: rotate(-180deg) scale(0); opacity: 0; }
+      to { transform: rotate(0) scale(1); opacity: 1; }
     }
 
     .intro-crown {
@@ -391,15 +359,8 @@
     }
 
     @keyframes crownReveal {
-      from {
-        opacity: 0;
-        transform: scale(0.5) translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+      from { opacity: 0; transform: scale(0.5) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     .intro-title {
@@ -443,34 +404,16 @@
       font-weight: 600;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
+    @keyframes fadeIn { to { opacity: 1; } }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeUpScale {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.9);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(20px) scale(0.9); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     section {
@@ -503,15 +446,8 @@
     }
 
     @keyframes bgPulse {
-
-      0%,
-      100% {
-        opacity: 0.8;
-      }
-
-      50% {
-        opacity: 1;
-      }
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
     }
 
     .hero-watermark {
@@ -530,15 +466,8 @@
     }
 
     @keyframes watermarkFloat {
-
-      0%,
-      100% {
-        transform: translate(-50%, -50%) scale(1);
-      }
-
-      50% {
-        transform: translate(-50%, -50%) scale(1.05);
-      }
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.05); }
     }
 
     .hero-content {
@@ -573,17 +502,8 @@
     }
 
     @keyframes starPulse {
-
-      0%,
-      100% {
-        opacity: 0.5;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.2);
-      }
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
 
     .hero-title {
@@ -606,19 +526,10 @@
       animation: slideUp 0.6s var(--ease-snappy) forwards;
     }
 
-    .hero-title .line:nth-child(1) span {
-      animation-delay: 0.3s;
-    }
+    .hero-title .line:nth-child(1) span { animation-delay: 0.3s; }
+    .hero-title .line:nth-child(2) span { animation-delay: 0.4s; }
 
-    .hero-title .line:nth-child(2) span {
-      animation-delay: 0.4s;
-    }
-
-    @keyframes slideUp {
-      to {
-        transform: translateY(0);
-      }
-    }
+    @keyframes slideUp { to { transform: translateY(0); } }
 
     .hero-tagline {
       font-family: 'Cormorant Garamond', serif;
@@ -655,15 +566,8 @@
     }
 
     @keyframes expandFromCenter {
-      from {
-        max-width: 0;
-        opacity: 0;
-      }
-
-      to {
-        max-width: 100px;
-        opacity: 1;
-      }
+      from { max-width: 0; opacity: 0; }
+      to { max-width: 100px; opacity: 1; }
     }
 
     .hero-royal-line .crest {
@@ -673,15 +577,8 @@
     }
 
     @keyframes crownBounce {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-5px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     .hero-meta {
@@ -714,17 +611,8 @@
     }
 
     @keyframes dotPulse {
-
-      0%,
-      100% {
-        opacity: 0.5;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.5);
-      }
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
     }
 
     .chapter-divider {
@@ -752,15 +640,8 @@
     }
 
     @keyframes crownFloat {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .chapter-number {
@@ -883,21 +764,10 @@
       transform: translateY(0);
     }
 
-    .cast-member:nth-child(1) {
-      transition-delay: 0s;
-    }
-
-    .cast-member:nth-child(2) {
-      transition-delay: 0.08s;
-    }
-
-    .cast-member:nth-child(3) {
-      transition-delay: 0.16s;
-    }
-
-    .cast-member:nth-child(4) {
-      transition-delay: 0.24s;
-    }
+    .cast-member:nth-child(1) { transition-delay: 0s; }
+    .cast-member:nth-child(2) { transition-delay: 0.08s; }
+    .cast-member:nth-child(3) { transition-delay: 0.16s; }
+    .cast-member:nth-child(4) { transition-delay: 0.24s; }
 
     .cast-photo-wrap {
       position: relative;
@@ -911,7 +781,6 @@
       transition: all 0.6s var(--ease-smooth) 0.1s;
       background: var(--bg-warm);
       cursor: pointer;
-      /* NEW: pointer for clickable */
     }
 
     .cast-member.in-view .cast-photo-wrap {
@@ -926,10 +795,8 @@
       object-position: center;
       background: var(--bg-warm);
       pointer-events: none;
-      /* Let click go to wrapper */
     }
 
-    /* NEW: Zoom indicator on hover */
     .cast-photo-wrap::after {
       content: '🔍';
       position: absolute;
@@ -1004,15 +871,8 @@
     }
 
     @keyframes crownPulse {
-
-      0%,
-      100% {
-        opacity: 0.8;
-      }
-
-      50% {
-        opacity: 1;
-      }
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
     }
 
     .cast-info {
@@ -1101,13 +961,8 @@
     }
 
     @keyframes starRotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     .cast-detail {
@@ -1126,53 +981,18 @@
       transform: translateX(0);
     }
 
-    .cast-detail:nth-child(1) {
-      transition-delay: 0.35s;
-    }
-
-    .cast-detail:nth-child(2) {
-      transition-delay: 0.38s;
-    }
-
-    .cast-detail:nth-child(3) {
-      transition-delay: 0.41s;
-    }
-
-    .cast-detail:nth-child(4) {
-      transition-delay: 0.44s;
-    }
-
-    .cast-detail:nth-child(5) {
-      transition-delay: 0.47s;
-    }
-
-    .cast-detail:nth-child(6) {
-      transition-delay: 0.5s;
-    }
-
-    .cast-detail:nth-child(7) {
-      transition-delay: 0.53s;
-    }
-
-    .cast-detail:nth-child(8) {
-      transition-delay: 0.56s;
-    }
-
-    .cast-detail:nth-child(9) {
-      transition-delay: 0.59s;
-    }
-
-    .cast-detail:nth-child(10) {
-      transition-delay: 0.62s;
-    }
-
-    .cast-detail:nth-child(11) {
-      transition-delay: 0.65s;
-    }
-
-    .cast-detail:nth-child(12) {
-      transition-delay: 0.68s;
-    }
+    .cast-detail:nth-child(1) { transition-delay: 0.35s; }
+    .cast-detail:nth-child(2) { transition-delay: 0.38s; }
+    .cast-detail:nth-child(3) { transition-delay: 0.41s; }
+    .cast-detail:nth-child(4) { transition-delay: 0.44s; }
+    .cast-detail:nth-child(5) { transition-delay: 0.47s; }
+    .cast-detail:nth-child(6) { transition-delay: 0.5s; }
+    .cast-detail:nth-child(7) { transition-delay: 0.53s; }
+    .cast-detail:nth-child(8) { transition-delay: 0.56s; }
+    .cast-detail:nth-child(9) { transition-delay: 0.59s; }
+    .cast-detail:nth-child(10) { transition-delay: 0.62s; }
+    .cast-detail:nth-child(11) { transition-delay: 0.65s; }
+    .cast-detail:nth-child(12) { transition-delay: 0.68s; }
 
     .cast-detail-key {
       font-family: 'Cinzel', serif;
@@ -1345,17 +1165,9 @@
       transform: translateX(0);
     }
 
-    .timeline-item:nth-child(1) {
-      transition-delay: 0.15s;
-    }
-
-    .timeline-item:nth-child(2) {
-      transition-delay: 0.25s;
-    }
-
-    .timeline-item:nth-child(3) {
-      transition-delay: 0.35s;
-    }
+    .timeline-item:nth-child(1) { transition-delay: 0.15s; }
+    .timeline-item:nth-child(2) { transition-delay: 0.25s; }
+    .timeline-item:nth-child(3) { transition-delay: 0.35s; }
 
     .timeline-marker {
       position: absolute;
@@ -1397,17 +1209,8 @@
     }
 
     @keyframes markerPulse {
-
-      0%,
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-
-      50% {
-        transform: scale(1.3);
-        opacity: 0.7;
-      }
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
     }
 
     .timeline-year {
@@ -1493,17 +1296,9 @@
       transform: translateX(0);
     }
 
-    .meta-row:nth-child(1) {
-      transition-delay: 0.3s;
-    }
-
-    .meta-row:nth-child(2) {
-      transition-delay: 0.33s;
-    }
-
-    .meta-row:nth-child(3) {
-      transition-delay: 0.36s;
-    }
+    .meta-row:nth-child(1) { transition-delay: 0.3s; }
+    .meta-row:nth-child(2) { transition-delay: 0.33s; }
+    .meta-row:nth-child(3) { transition-delay: 0.36s; }
 
     .meta-row .key {
       font-family: 'Cinzel', serif;
@@ -1523,6 +1318,7 @@
       flex: 1;
     }
 
+    /* ============ FINALE SECTION - BETTER SPACING ============ */
     .finale {
       min-height: 100vh;
       min-height: 100dvh;
@@ -1532,6 +1328,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      padding: 100px 0;
     }
 
     .finale-bg {
@@ -1544,15 +1341,8 @@
     }
 
     @keyframes finaleGlow {
-
-      0%,
-      100% {
-        opacity: 0.8;
-      }
-
-      50% {
-        opacity: 1;
-      }
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
     }
 
     .finale-watermark {
@@ -1567,13 +1357,8 @@
     }
 
     @keyframes watermarkRotate {
-      from {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-
-      to {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     .finale-content {
@@ -1581,14 +1366,14 @@
       z-index: 2;
       max-width: 800px;
       width: 100%;
-      padding: 60px 30px;
+      padding: 80px 30px;
     }
 
     .finale-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3.5rem, 9.5vw, 8rem);
       line-height: 0.95;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       font-weight: 600;
       letter-spacing: -0.02em;
       opacity: 0;
@@ -1605,7 +1390,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.5rem;
       color: var(--ink-dim);
-      margin-bottom: 50px;
+      margin-bottom: 70px;
       font-weight: 500;
       line-height: 1.5;
       opacity: 0;
@@ -1868,7 +1653,7 @@
       transform: translateY(0);
     }
 
-    /* ============ GLASS MOBILE BOTTOM NAV ============ */
+    /* ============ GLASS MOBILE BOTTOM NAV - FIXED ============ */
     .mobile-nav {
       position: fixed;
       bottom: 16px;
@@ -1884,33 +1669,46 @@
       justify-content: space-around;
       align-items: center;
       z-index: 1000;
-      box-shadow:
+      box-shadow: 
         0 10px 40px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      height: 70px;
     }
 
     .mobile-nav a {
       color: var(--ink-dim);
       text-decoration: none;
       font-family: 'Cinzel', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 10px 14px;
+      padding: 8px 6px;
       border-radius: 100px;
       transition: all 0.25s var(--ease-smooth);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
+      justify-content: center;
+      gap: 4px;
       font-weight: 600;
       flex: 1;
+      min-width: 0;
+      height: 100%;
+      overflow: hidden;
     }
 
     .mobile-nav a svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
       transition: transform 0.25s var(--ease-smooth);
+    }
+
+    .mobile-nav a span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
     }
 
     .mobile-nav a.active {
@@ -1945,42 +1743,128 @@
       background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 
-    /* ============ MEDIA QUERIES ============ */
+    /* ============ UNIVERSAL MEDIA QUERIES (NEXUS STYLE) ============ */
+    
+    /* ===== SMALL PHONES (max-width: 479px) ===== */
     @media (max-width: 479px) {
       body {
-        padding-bottom: 110px;
+        padding-bottom: 100px;
+        cursor: auto;
+        font-size: 16px;
+      }
+
+      .cursor-ring, .cursor-dot { display: none; }
+      .chapter-indicator { display: none; }
+
+      .intro-crown .crown-svg { width: 70px; height: 70px; }
+      .intro-title { font-size: 1.8rem; letter-spacing: 0.08em; }
+      .intro-subtitle { font-size: 1rem; padding: 0 15px; }
+      .intro-chapter { font-size: 0.65rem; padding: 8px 14px; letter-spacing: 0.3em; }
+
+      .hero {
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 0;
+      }
+
+      .hero-content { padding: 15px 15px; }
+      .hero-title { font-size: 3rem; margin-bottom: 15px; }
+      .hero-tagline { font-size: 1rem; margin-bottom: 15px; }
+      .hero-meta { gap: 10px; font-size: 0.65rem; letter-spacing: 0.1em; padding: 0 5px; }
+
+      section { min-height: auto; display: block; }
+
+      .cast-wrapper, .timeline-wrapper { padding: 50px 15px; }
+      .chapter-divider { padding: 50px 15px; }
+      .pullquote { padding: 60px 15px; }
+      .finale-content { padding: 50px 15px; }
+      .finale { padding: 60px 0; }
+
+      .cast-photo-wrap { 
+        max-width: 320px; 
+        width: 92%;
+      }
+      
+      .cast-name { font-size: 2rem; }
+      .cast-desc { font-size: 1rem; }
+      .cast-number { font-size: 3.5rem; }
+      .cast-role { font-size: 0.7rem; bottom: 20px; left: 20px; }
+
+      .cast-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        font-size: 0.95rem;
+      }
+
+      .cast-detail-key { font-size: 0.7rem; min-width: auto; }
+      .cast-detail-value { text-align: left; font-size: 1rem; }
+
+      .timeline-year { font-size: 2.5rem; }
+      .timeline-title { font-size: 1.6rem; }
+      .timeline-desc { font-size: 1rem; }
+
+      .meta-row {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.95rem;
+      }
+
+      .meta-row .key { min-width: auto; font-size: 0.7rem; }
+      .meta-row .value { font-size: 1rem; }
+
+      .contact-row { padding: 18px 12px; gap: 10px; }
+      .contact-icon { width: 42px; height: 42px; font-size: 0.95rem; }
+      .contact-label { font-size: 0.7rem; letter-spacing: 0.15em; }
+      .contact-value { font-size: 1.1rem; }
+
+      .pullquote-text { padding: 0 10px; font-size: 1.5rem; }
+      .pullquote-text::before { left: -5px; font-size: 3.5rem; top: -15px; }
+
+      .chapter-number { font-size: 4rem; }
+      .chapter-crown { font-size: 1.7rem; }
+      .chapter-title { font-size: 1.8rem; }
+
+      footer { padding: 40px 15px; }
+      .footer-title { font-size: 1.4rem; }
+      .footer-motto { font-size: 0.9rem; }
+
+      /* Modal mobile */
+      .photo-modal { padding: 15px 10px; }
+      .photo-modal-close { top: 15px; right: 15px; width: 40px; height: 40px; font-size: 1.1rem; }
+      .photo-modal-caption { bottom: 15px; font-size: 0.65rem; padding: 6px 14px; letter-spacing: 0.2em; }
+
+      /* Bottom Nav Fix for Small Phones */
+      .mobile-nav {
+        bottom: 10px;
+        left: 8px;
+        right: 8px;
+        padding: 6px 4px;
+        height: 64px;
+      }
+
+      .mobile-nav a {
+        font-size: 0.55rem;
+        padding: 4px 2px;
+        gap: 2px;
+      }
+
+      .mobile-nav a svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    /* ===== MEDIUM PHONES (480px - 767px) ===== */
+    @media (min-width: 480px) and (max-width: 767px) {
+      body {
+        padding-bottom: 100px;
         cursor: auto;
         font-size: 17px;
       }
 
-      .cursor-ring,
-      .cursor-dot {
-        display: none;
-      }
-
-      .chapter-indicator {
-        display: none;
-      }
-
-      .intro-crown .crown-svg {
-        width: 70px;
-        height: 70px;
-      }
-
-      .intro-title {
-        font-size: 2rem;
-        letter-spacing: 0.1em;
-      }
-
-      .intro-subtitle {
-        font-size: 1.15rem;
-        padding: 0 20px;
-      }
-
-      .intro-chapter {
-        font-size: 0.75rem;
-        padding: 10px 18px;
-      }
+      .cursor-ring, .cursor-dot { display: none; }
+      .chapter-indicator { display: none; }
 
       .hero {
         min-height: 100vh;
@@ -1988,260 +1872,45 @@
         padding: 0;
       }
 
-      .hero-content {
-        padding: 20px 20px;
-      }
+      .hero-content { padding: 20px 20px; }
+      .hero-title { font-size: 4rem; }
 
-      .hero-title {
-        font-size: 3.5rem;
-        margin-bottom: 18px;
-      }
+      section { min-height: auto; display: block; }
 
-      .hero-tagline {
-        font-size: 1.2rem;
-        margin-bottom: 18px;
-      }
+      .cast-wrapper, .timeline-wrapper { padding: 60px 20px; }
+      .chapter-divider { padding: 60px 20px; }
+      .pullquote { padding: 80px 20px; }
+      .finale-content { padding: 60px 20px; }
+      .finale { padding: 80px 0; }
 
-      .hero-meta {
-        gap: 14px;
-        font-size: 0.75rem;
-        letter-spacing: 0.15em;
-        padding: 0 10px;
-      }
+      .cast-photo-wrap { max-width: 380px; width: 88%; }
 
-      section {
-        min-height: auto;
-        display: block;
-      }
+      footer { padding: 50px 20px; }
 
-      .cast-wrapper,
-      .timeline-wrapper {
-        padding: 60px 20px;
-      }
-
-      .chapter-divider {
-        padding: 60px 20px;
-      }
-
-      .pullquote {
-        padding: 70px 20px;
-      }
-
-      .finale-content {
-        padding: 60px 20px;
-      }
-
-      /* BIGGER PHOTOS ON MOBILE */
-      .cast-photo-wrap {
-        max-width: 360px;
-        width: 90%;
-      }
-
-      .cast-name {
-        font-size: 2.25rem;
-      }
-
-      .cast-desc {
-        font-size: 1.1rem;
-      }
-
-      .cast-number {
-        font-size: 4rem;
-      }
-
-      .cast-role {
-        font-size: 0.75rem;
-      }
-
-      .cast-detail {
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-        font-size: 1.05rem;
-      }
-
-      .cast-detail-key {
-        font-size: 0.75rem;
-        min-width: 100px;
-      }
-
-      .cast-detail-value {
-        text-align: right;
-        font-size: 1.15rem;
-      }
-
-      .timeline-year {
-        font-size: 2.75rem;
-      }
-
-      .timeline-title {
-        font-size: 1.85rem;
-      }
-
-      .timeline-desc {
-        font-size: 1.1rem;
-      }
-
-      .meta-row {
-        flex-direction: row;
-        gap: 10px;
-        font-size: 1.05rem;
-      }
-
-      .meta-row .key {
-        min-width: 95px;
-        font-size: 0.75rem;
-      }
-
-      .meta-row .value {
-        font-size: 1.15rem;
-      }
-
-      .contact-row {
-        padding: 22px 15px;
-        gap: 12px;
-      }
-
-      .contact-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 1.05rem;
-      }
-
-      .contact-label {
-        font-size: 0.75rem;
-      }
-
-      .contact-value {
-        font-size: 1.25rem;
-      }
-
-      .pullquote-text {
-        padding: 0 15px;
-        font-size: 1.75rem;
-      }
-
-      .pullquote-text::before {
-        left: 0;
-        font-size: 4.5rem;
-        top: -20px;
-      }
-
-      .chapter-number {
-        font-size: 5rem;
-      }
-
-      .chapter-crown {
-        font-size: 1.9rem;
-      }
-
-      .chapter-title {
-        font-size: 2.1rem;
-      }
-
-      footer {
-        padding: 50px 20px;
-      }
-
-      .footer-title {
-        font-size: 1.65rem;
-      }
-
-      .footer-motto {
-        font-size: 1.05rem;
-      }
-
-      /* Modal mobile adjustments */
-      .photo-modal {
-        padding: 20px 15px;
-      }
-
-      .photo-modal-close {
-        top: 20px;
-        right: 20px;
-        width: 44px;
-        height: 44px;
-        font-size: 1.3rem;
-      }
-
-      .photo-modal-caption {
-        bottom: 20px;
-        font-size: 0.7rem;
-        padding: 8px 18px;
-      }
-    }
-
-    @media (min-width: 480px) and (max-width: 767px) {
-      body {
-        padding-bottom: 110px;
-        cursor: auto;
-        font-size: 18px;
-      }
-
-      .cursor-ring,
-      .cursor-dot {
-        display: none;
-      }
-
-      .chapter-indicator {
-        display: none;
-      }
-
-      .hero {
-        min-height: 100vh;
-        min-height: 100dvh;
-        padding: 0;
-      }
-
-      .hero-content {
-        padding: 20px 24px;
-      }
-
-      .hero-title {
-        font-size: 4.5rem;
-      }
-
-      section {
-        min-height: auto;
-        display: block;
-      }
-
-      .cast-wrapper,
-      .timeline-wrapper {
-        padding: 70px 24px;
-      }
-
-      .chapter-divider {
-        padding: 70px 24px;
-      }
-
-      .pullquote {
-        padding: 90px 24px;
-      }
-
-      .finale-content {
-        padding: 70px 24px;
-      }
-
-      .cast-photo-wrap {
-        max-width: 400px;
-        width: 85%;
-      }
-
-      footer {
-        padding: 55px 24px;
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 1023px) {
-      body {
-        padding-bottom: 0;
-        font-size: 18px;
-      }
-
+      /* Bottom Nav */
       .mobile-nav {
-        display: none;
+        bottom: 12px;
+        left: 10px;
+        right: 10px;
+        padding: 8px 6px;
+        height: 68px;
       }
+
+      .mobile-nav a {
+        font-size: 0.6rem;
+        padding: 6px 4px;
+      }
+
+      .mobile-nav a svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    /* ===== TABLETS (768px - 1023px) ===== */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      body { padding-bottom: 0; font-size: 18px; }
+      .mobile-nav { display: none; }
 
       .hero {
         min-height: 100vh;
@@ -2249,27 +1918,16 @@
         padding: 0;
       }
 
-      .hero-content {
-        padding: 30px 40px;
-      }
-
-      section {
-        min-height: auto;
-        display: block;
-      }
+      .hero-content { padding: 30px 40px; }
+      section { min-height: auto; display: block; }
 
       .cast-member {
         grid-template-columns: 1fr 1fr;
         gap: 60px;
       }
 
-      .cast-member:nth-child(even) .cast-photo-wrap {
-        order: 2;
-      }
-
-      .timeline-line {
-        left: 50%;
-      }
+      .cast-member:nth-child(even) .cast-photo-wrap { order: 2; }
+      .timeline-line { left: 50%; }
 
       .timeline-item {
         padding: 0 0 100px;
@@ -2305,15 +1963,10 @@
       }
     }
 
+    /* ===== SMALL LAPTOPS (1024px - 1279px) ===== */
     @media (min-width: 1024px) and (max-width: 1279px) {
-      body {
-        padding-bottom: 0;
-        font-size: 18px;
-      }
-
-      .mobile-nav {
-        display: none;
-      }
+      body { padding-bottom: 0; font-size: 18px; }
+      .mobile-nav { display: none; }
 
       .hero {
         min-height: 100vh;
@@ -2326,17 +1979,9 @@
         gap: 80px;
       }
 
-      .cast-member:nth-child(even) .cast-photo-wrap {
-        order: 2;
-      }
-
-      .cast-grid {
-        gap: 120px;
-      }
-
-      .timeline-line {
-        left: 50%;
-      }
+      .cast-member:nth-child(even) .cast-photo-wrap { order: 2; }
+      .cast-grid { gap: 120px; }
+      .timeline-line { left: 50%; }
 
       .timeline-item {
         padding: 0 0 100px;
@@ -2372,15 +2017,10 @@
       }
     }
 
+    /* ===== STANDARD DESKTOPS (1280px - 1919px) ===== */
     @media (min-width: 1280px) and (max-width: 1919px) {
-      body {
-        padding-bottom: 0;
-        font-size: 18px;
-      }
-
-      .mobile-nav {
-        display: none;
-      }
+      body { padding-bottom: 0; font-size: 18px; }
+      .mobile-nav { display: none; }
 
       .hero {
         min-height: 100vh;
@@ -2388,30 +2028,17 @@
         padding: 0;
       }
 
-      .cast-wrapper {
-        padding: 100px 60px;
-      }
-
-      .timeline-wrapper {
-        padding: 100px 60px;
-      }
+      .cast-wrapper { padding: 100px 60px; }
+      .timeline-wrapper { padding: 100px 60px; }
 
       .cast-member {
         grid-template-columns: 1fr 1fr;
         gap: 100px;
       }
 
-      .cast-member:nth-child(even) .cast-photo-wrap {
-        order: 2;
-      }
-
-      .cast-grid {
-        gap: 140px;
-      }
-
-      .timeline-line {
-        left: 50%;
-      }
+      .cast-member:nth-child(even) .cast-photo-wrap { order: 2; }
+      .cast-grid { gap: 140px; }
+      .timeline-line { left: 50%; }
 
       .timeline-item {
         padding: 0 0 120px;
@@ -2446,32 +2073,16 @@
         justify-content: flex-start;
       }
 
-      .chapter-divider {
-        padding: 120px 60px;
-      }
-
-      .pullquote {
-        padding: 150px 60px;
-      }
-
-      .finale-content {
-        padding: 80px 60px;
-      }
-
-      footer {
-        padding: 85px 60px;
-      }
+      .chapter-divider { padding: 120px 60px; }
+      .pullquote { padding: 150px 60px; }
+      .finale-content { padding: 80px 60px; }
+      footer { padding: 85px 60px; }
     }
 
+    /* ===== LARGE DESKTOPS (1920px+) ===== */
     @media (min-width: 1920px) {
-      body {
-        padding-bottom: 0;
-        font-size: 19px;
-      }
-
-      .mobile-nav {
-        display: none;
-      }
+      body { padding-bottom: 0; font-size: 19px; }
+      .mobile-nav { display: none; }
 
       .hero {
         min-height: 100vh;
@@ -2479,32 +2090,17 @@
         padding: 0;
       }
 
-      .cast-wrapper {
-        padding: 130px 80px;
-        max-width: 1600px;
-      }
-
-      .timeline-wrapper {
-        padding: 130px 80px;
-        max-width: 1400px;
-      }
+      .cast-wrapper { padding: 130px 80px; max-width: 1600px; }
+      .timeline-wrapper { padding: 130px 80px; max-width: 1400px; }
 
       .cast-member {
         grid-template-columns: 1fr 1fr;
         gap: 130px;
       }
 
-      .cast-member:nth-child(even) .cast-photo-wrap {
-        order: 2;
-      }
-
-      .cast-grid {
-        gap: 160px;
-      }
-
-      .timeline-line {
-        left: 50%;
-      }
+      .cast-member:nth-child(even) .cast-photo-wrap { order: 2; }
+      .cast-grid { gap: 160px; }
+      .timeline-line { left: 50%; }
 
       .timeline-item {
         padding: 0 0 140px;
@@ -2539,101 +2135,48 @@
         justify-content: flex-start;
       }
 
-      .chapter-divider {
-        padding: 140px 80px;
-      }
-
-      .pullquote {
-        padding: 180px 80px;
-      }
-
-      .finale-content {
-        padding: 100px 80px;
-      }
-
-      footer {
-        padding: 110px 80px;
-      }
+      .chapter-divider { padding: 140px 80px; }
+      .pullquote { padding: 180px 80px; }
+      .finale-content { padding: 100px 80px; }
+      footer { padding: 110px 80px; }
     }
 
+    /* ===== 4K DISPLAYS (2560px+) ===== */
     @media (min-width: 2560px) {
-      body {
-        font-size: 20px;
-      }
-
-      .cast-wrapper,
-      .timeline-wrapper {
-        max-width: 1800px;
-      }
-
-      .hero-content,
-      .finale-content {
-        max-width: 1400px;
-      }
+      body { font-size: 20px; }
+      .cast-wrapper, .timeline-wrapper { max-width: 1800px; }
+      .hero-content, .finale-content { max-width: 1400px; }
     }
 
+    /* ===== LANDSCAPE MODE ===== */
     @media (max-height: 500px) and (orientation: landscape) {
-      .hero {
-        min-height: auto;
-        padding: 80px 30px 60px;
-      }
-
-      .hero-title {
-        font-size: 3.5rem;
-      }
-
-      .chapter-divider {
-        padding: 50px 30px;
-      }
-
-      .chapter-number {
-        font-size: 4rem;
-      }
-
-      section {
-        min-height: auto;
-      }
+      .hero { min-height: auto; padding: 80px 30px 60px; }
+      .hero-title { font-size: 3.5rem; }
+      .chapter-divider { padding: 50px 30px; }
+      .chapter-number { font-size: 4rem; }
+      section { min-height: auto; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
     }
 
     @media print {
-
-      .grain,
-      .vignette,
-      .cursor-ring,
-      .cursor-dot,
-      .scroll-progress,
-      .chapter-indicator,
-      .mobile-nav,
-      .intro,
-      .photo-modal {
+      .grain, .vignette, .cursor-ring, .cursor-dot,
+      .scroll-progress, .chapter-indicator, .mobile-nav, .intro, .photo-modal {
         display: none !important;
       }
-
-      body {
-        background: white;
-        color: black;
-        cursor: auto;
-      }
-
-      section {
-        page-break-inside: avoid;
-      }
+      body { background: white; color: black; cursor: auto; }
+      section { page-break-inside: avoid; }
     }
   </style>
 </head>
 
 <body>
-  <!-- ============ PHOTO LIGHTBOX MODAL ============ -->
+  <!-- PHOTO LIGHTBOX MODAL -->
   <div class="photo-modal" id="photoModal">
     <button class="photo-modal-close" id="photoModalClose" aria-label="Close">✕</button>
     <img class="photo-modal-image" id="photoModalImage" src="" alt="">
@@ -2736,28 +2279,15 @@
             <h3 class="cast-name display"><span class="accent">Intro</span> Duction</h3>
             <p class="cast-desc"></p>
             <div class="cast-details">
-              <div class="cast-detail">
-                <span class="cast-detail-key">Full Name</span><span class="cast-detail-value">Smit Ashokbhai Anaghan</span>
-              </div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Date of Birth</span><span class="cast-detail-value">16 / 10 / 2002</span>
-              </div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Age</span><span class="cast-detail-value">23 Years</span></div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Height</span><span class="cast-detail-value">5'6"</span></div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Blood Group</span><span class="cast-detail-value">B+</span></div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Marital Status</span><span class="cast-detail-value">Unmarried</span>
-              </div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Religion</span><span class="cast-detail-value">Hindu</span></div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Caste</span><span class="cast-detail-value">Patel (Leuva)</span></div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Hobbies</span><span class="cast-detail-value">Travel, Music, Driving, Dance, Movie, Editing, Cricket, Table-Tennis, Garba</span>
-              </div>
+              <div class="cast-detail"><span class="cast-detail-key">Full Name</span><span class="cast-detail-value">Smit Ashokbhai Anaghan</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Date of Birth</span><span class="cast-detail-value">16 / 10 / 2002</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Age</span><span class="cast-detail-value">23 Years</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Height</span><span class="cast-detail-value">5'6"</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Blood Group</span><span class="cast-detail-value">B+</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Marital Status</span><span class="cast-detail-value">Unmarried</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Religion</span><span class="cast-detail-value">Hindu</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Caste</span><span class="cast-detail-value">Patel (Leuva)</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Hobbies</span><span class="cast-detail-value">Travel, Music, Driving, Dance, Movie, Editing, Cricket, Table-Tennis, Garba</span></div>
             </div>
           </div>
         </div>
@@ -2805,12 +2335,9 @@
           <div class="cast-info">
             <div class="cast-number">01</div>
             <h3 class="cast-name display">Mr. <span class="accent">Ashokbhai Ganeshbhai Anaghan</span></h3>
-            <p class="cast-desc">The cornerstone of the family. A man of principles, hard work, and unwavering
-              dedication to his loved ones.</p>
+            <p class="cast-desc">The cornerstone of the family. A man of principles, hard work, and unwavering dedication to his loved ones.</p>
             <div class="cast-details">
-              <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Text-Tile Business</span>
-              </div>
+              <div class="cast-detail"><span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Text-Tile Business</span></div>
             </div>
           </div>
         </div>
@@ -2823,11 +2350,9 @@
           <div class="cast-info">
             <div class="cast-number">02</div>
             <h3 class="cast-name display">Mrs. <span class="accent">Jayshriben Ashokbhai Anaghan</span></h3>
-            <p class="cast-desc">The heart of the home. Her grace, wisdom, and love have shaped every member of this
-              family.</p>
+            <p class="cast-desc">The heart of the home. Her grace, wisdom, and love have shaped every member of this family.</p>
             <div class="cast-details">
-              <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">House Wife</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Occupation</span><span class="cast-detail-value">House Wife</span></div>
             </div>
           </div>
         </div>
@@ -2840,17 +2365,11 @@
           <div class="cast-info">
             <div class="cast-number">03</div>
             <h3 class="cast-name display">Mr. <span class="accent">Darshil Ashokbhai Anaghan</span></h3>
-            <p class="cast-desc">A companion in every sense. Together they share dreams, challenges, and the unbreakable
-              bond of brotherhood.</p>
+            <p class="cast-desc">A companion in every sense. Together they share dreams, challenges, and the unbreakable bond of brotherhood.</p>
             <div class="cast-details">
-              <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Work in Business Management</span>
-              </div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Education</span><span class="cast-detail-value">Master in International Business Management</span>
-              </div>
-              <div class="cast-detail">
-                <span class="cast-detail-key">Status</span><span class="cast-detail-value">Unmarried</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Work in Business Management</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Education</span><span class="cast-detail-value">Master in International Business Management</span></div>
+              <div class="cast-detail"><span class="cast-detail-key">Status</span><span class="cast-detail-value">Unmarried</span></div>
             </div>
           </div>
         </div>
@@ -2879,13 +2398,10 @@
           <div class="timeline-marker"></div>
           <div class="timeline-year">2025</div>
           <h3 class="timeline-title">BCA <span class="accent">Graduation</span></h3>
-          <p class="timeline-desc">The academic foundation was laid. A journey through the world of computers and
-            applications, building the technical bedrock for future endeavors.</p>
+          <p class="timeline-desc">The academic foundation was laid. A journey through the world of computers and applications, building the technical bedrock for future endeavors.</p>
           <div class="timeline-meta">
-            <div class="meta-row">
-              <span class="key">Degree</span><span class="value">Bachelor of Computer Applications</span></div>
-            <div class="meta-row">
-              <span class="key">University</span><span class="value">Veer Narmad South Gujarat University</span></div>
+            <div class="meta-row"><span class="key">Degree</span><span class="value">Bachelor of Computer Applications</span></div>
+            <div class="meta-row"><span class="key">University</span><span class="value">Veer Narmad South Gujarat University</span></div>
             <div class="meta-row"><span class="key">Status</span><span class="value">Completed</span></div>
           </div>
         </div>
@@ -2894,14 +2410,10 @@
           <div class="timeline-marker"></div>
           <div class="timeline-year">2025–26</div>
           <h3 class="timeline-title">Digital <span class="accent">Marketing</span></h3>
-          <p class="timeline-desc">A dive into the modern world of digital communication. Mastering the art and science
-            of reaching audiences through the digital landscape.</p>
+          <p class="timeline-desc">A dive into the modern world of digital communication. Mastering the art and science of reaching audiences through the digital landscape.</p>
           <div class="timeline-meta">
-            <div class="meta-row"><span class="key">Focus</span><span class="value">SMM, Meta Ads, Google Ads, AI</span>
-            </div>
-            <div class="meta-row">
-              <span class="key">Specialty</span><span class="value">Social Media Marketing, Performance Marketing</span>
-            </div>
+            <div class="meta-row"><span class="key">Focus</span><span class="value">SMM, Meta Ads, Google Ads, AI</span></div>
+            <div class="meta-row"><span class="key">Specialty</span><span class="value">Social Media Marketing, Performance Marketing</span></div>
             <div class="meta-row"><span class="key">Status</span><span class="value">Completed</span></div>
           </div>
         </div>
@@ -2910,13 +2422,10 @@
           <div class="timeline-marker"></div>
           <div class="timeline-year">2026</div>
           <h3 class="timeline-title">Nexus <span class="accent">Institute</span></h3>
-          <p class="timeline-desc">The dream takes form. An institute and agency born from passion — educating the next
-            generation while serving real clients with real results.</p>
+          <p class="timeline-desc">The dream takes form. An institute and agency born from passion — educating the next generation while serving real clients with real results.</p>
           <div class="timeline-meta">
-            <div class="meta-row">
-              <span class="key">Venture</span><span class="value">Nexus Institute & Digital Agency</span></div>
-            <div class="meta-row"><span class="key">Location</span><span class="value">Sarthana Jakatnaka, Surat</span>
-            </div>
+            <div class="meta-row"><span class="key">Venture</span><span class="value">Nexus Institute & Digital Agency</span></div>
+            <div class="meta-row"><span class="key">Location</span><span class="value">Sarthana Jakatnaka, Surat</span></div>
             <div class="meta-row"><span class="key">Role</span><span class="value">Founder & Lead Trainer</span></div>
           </div>
         </div>
@@ -2949,8 +2458,7 @@
           <div class="contact-left">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
             </div>
             <div class="contact-text">
@@ -2965,8 +2473,7 @@
           <div class="contact-left">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <path
-                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
             </div>
             <div class="contact-text">
@@ -2977,8 +2484,7 @@
           <div class="contact-arrow">→</div>
         </a>
 
-        <a href="https://www.google.com/maps/place/Hans+Society,+Varachha,+Surat,+Gujarat+395006/@21.210829,72.8530985,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f03a14418eb:0x912ca367a87a6a2d!8m2!3d21.2107565!4d72.8556096!16s%2Fg%2F1jkz5_ltk?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank" class="contact-row reveal">
+        <a href="https://www.google.com/maps/place/Hans+Society,+Varachha,+Surat,+Gujarat+395006/@21.210829,72.8530985,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f03a14418eb:0x912ca367a87a6a2d!8m2!3d21.2107565!4d72.8556096!16s%2Fg%2F1jkz5_ltk?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-row reveal">
           <div class="contact-left">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
@@ -3068,23 +2574,16 @@
       document.body.style.overflow = '';
     }
 
-    // Attach click to all photo wraps
     document.querySelectorAll('.cast-photo-wrap').forEach(wrap => {
       wrap.addEventListener('click', () => {
         const img = wrap.querySelector('img');
-        const fallback = wrap.querySelector('.photo-fallback');
         const caption = wrap.dataset.caption || '';
-        
         if (img) {
           openPhotoModal(img.src, img.alt, caption);
-        } else if (fallback) {
-          // For fallback, don't open modal
-          return;
         }
       });
     });
 
-    // Close modal
     photoModalClose.addEventListener('click', (e) => {
       e.stopPropagation();
       closePhotoModal();
@@ -3096,7 +2595,6 @@
       }
     });
 
-    // ESC key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && photoModal.classList.contains('active')) {
         closePhotoModal();
