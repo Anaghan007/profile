@@ -82,7 +82,7 @@
       }
     }
 
-    /* Custom Cursor - Faster */
+    /* Custom Cursor */
     .cursor-ring {
       position: fixed;
       width: 40px;
@@ -180,17 +180,11 @@
       opacity: 1;
     }
 
-    /* Typography System */
+    /* Typography */
     .display {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
       letter-spacing: -0.02em;
-    }
-
-    .royal-display {
-      font-family: 'Cinzel', serif;
-      font-weight: 600;
-      letter-spacing: 0.05em;
     }
 
     .accent {
@@ -208,7 +202,6 @@
       line-height: 1.4;
     }
 
-    /* Crown SVG */
     .crown-svg {
       width: 60px;
       height: 60px;
@@ -221,7 +214,89 @@
       height: 100px;
     }
 
-    /* ROYAL INTRO - FASTER */
+    /* ============ PHOTO LIGHTBOX MODAL ============ */
+    .photo-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99998;
+      background: rgba(5, 5, 8, 0.92);
+      backdrop-filter: blur(25px) saturate(150%);
+      -webkit-backdrop-filter: blur(25px) saturate(150%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s var(--ease-smooth), visibility 0.4s;
+      cursor: pointer;
+    }
+
+    .photo-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .photo-modal-image {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 165, 116, 0.3);
+      transform: scale(0.85);
+      transition: transform 0.5s var(--ease-smooth);
+      cursor: default;
+    }
+
+    .photo-modal.active .photo-modal-image {
+      transform: scale(1);
+    }
+
+    .photo-modal-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(212, 165, 116, 0.15);
+      border: 1px solid rgba(212, 165, 116, 0.4);
+      color: var(--gold);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease-smooth);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .photo-modal-close:hover {
+      background: var(--gold);
+      color: var(--bg);
+      transform: rotate(90deg) scale(1.1);
+    }
+
+    .photo-modal-caption {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 10px 25px;
+      background: rgba(10, 9, 8, 0.7);
+      border: 1px solid rgba(212, 165, 116, 0.3);
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Intro */
     .intro {
       position: fixed;
       inset: 0;
@@ -398,7 +473,6 @@
       }
     }
 
-    /* SECTIONS */
     section {
       position: relative;
       padding: 0;
@@ -407,7 +481,6 @@
       justify-content: center;
     }
 
-    /* HERO - FASTER */
     .hero {
       min-height: 100vh;
       min-height: 100dvh;
@@ -654,7 +727,6 @@
       }
     }
 
-    /* CHAPTER DIVIDER - FASTER */
     .chapter-divider {
       padding: 100px 30px;
       text-align: center;
@@ -782,7 +854,6 @@
       transform: scale(1) rotate(0);
     }
 
-    /* CAST MEMBER - FASTER */
     .cast-wrapper {
       width: 100%;
       max-width: 1400px;
@@ -812,7 +883,6 @@
       transform: translateY(0);
     }
 
-    /* Staggered animations - faster */
     .cast-member:nth-child(1) {
       transition-delay: 0s;
     }
@@ -840,6 +910,8 @@
       transform: scale(0.9);
       transition: all 0.6s var(--ease-smooth) 0.1s;
       background: var(--bg-warm);
+      cursor: pointer;
+      /* NEW: pointer for clickable */
     }
 
     .cast-member.in-view .cast-photo-wrap {
@@ -847,26 +919,43 @@
       transform: scale(1);
     }
 
-    /* FIXED: Photo now shows completely without cropping */
     .cast-photo {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      /* Changed from cover to contain */
       object-position: center;
       background: var(--bg-warm);
-      /* Removed all filter effects */
+      pointer-events: none;
+      /* Let click go to wrapper */
     }
 
-    /* REMOVED: Hover effects on photo */
-    /* .cast-member:hover .cast-photo { ... } - DELETED */
-
+    /* NEW: Zoom indicator on hover */
     .cast-photo-wrap::after {
-      content: '';
+      content: '🔍';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(10, 9, 8, 0.8) 100%);
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: rgba(10, 9, 8, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 165, 116, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      z-index: 4;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.3s var(--ease-smooth);
       pointer-events: none;
+    }
+
+    .cast-photo-wrap:hover::after {
+      opacity: 1;
+      transform: scale(1);
     }
 
     .cast-photo-wrap::before {
@@ -901,6 +990,7 @@
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.5s var(--ease-smooth) 0.3s;
+      pointer-events: none;
     }
 
     .cast-member.in-view .cast-role {
@@ -1036,7 +1126,6 @@
       transform: translateX(0);
     }
 
-    /* Staggered animations for cast details - FASTER */
     .cast-detail:nth-child(1) {
       transition-delay: 0.35s;
     }
@@ -1104,7 +1193,6 @@
       flex: 1;
     }
 
-    /* PULLQUOTE - FASTER */
     .pullquote {
       padding: 120px 30px;
       text-align: center;
@@ -1214,7 +1302,6 @@
       transform: translateY(0);
     }
 
-    /* TIMELINE - FASTER */
     .timeline-wrapper {
       width: 100%;
       max-width: 1200px;
@@ -1258,7 +1345,6 @@
       transform: translateX(0);
     }
 
-    /* Staggered timeline animations - FASTER */
     .timeline-item:nth-child(1) {
       transition-delay: 0.15s;
     }
@@ -1407,7 +1493,6 @@
       transform: translateX(0);
     }
 
-    /* Staggered meta-row animations - FASTER */
     .meta-row:nth-child(1) {
       transition-delay: 0.3s;
     }
@@ -1438,7 +1523,6 @@
       flex: 1;
     }
 
-    /* FINALE - FASTER */
     .finale {
       min-height: 100vh;
       min-height: 100dvh;
@@ -1583,7 +1667,6 @@
       transform: translateY(0);
     }
 
-    /* Staggered contact row animations - FASTER */
     .contact-row:nth-child(1) {
       transition: all 0.25s var(--ease-smooth), opacity 0.5s var(--ease-smooth) 0.25s, transform 0.5s var(--ease-smooth) 0.25s;
     }
@@ -1677,7 +1760,6 @@
       transform: translateX(8px);
     }
 
-    /* FOOTER - FASTER */
     footer {
       padding: 70px 30px;
       text-align: center;
@@ -1775,7 +1857,6 @@
       transform: translateY(0);
     }
 
-    /* Reveal animations - FASTER */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -1787,64 +1868,61 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 {
-      transition-delay: 0.05s;
-    }
-
-    .reveal-delay-2 {
-      transition-delay: 0.1s;
-    }
-
-    .reveal-delay-3 {
-      transition-delay: 0.15s;
-    }
-
-    /* Mobile Bottom Nav - FASTER */
+    /* ============ GLASS MOBILE BOTTOM NAV ============ */
     .mobile-nav {
       position: fixed;
-      bottom: 15px;
-      left: 15px;
-      right: 15px;
-      background: rgba(10, 9, 8, 0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(212, 165, 116, 0.3);
+      bottom: 16px;
+      left: 12px;
+      right: 12px;
+      background: rgba(10, 9, 8, 0.35);
+      backdrop-filter: blur(30px) saturate(180%);
+      -webkit-backdrop-filter: blur(30px) saturate(180%);
+      border: 1px solid rgba(212, 165, 116, 0.25);
       border-radius: 100px;
-      padding: 8px;
+      padding: 10px 8px;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       z-index: 1000;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .mobile-nav a {
       color: var(--ink-dim);
       text-decoration: none;
       font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 10px 12px;
+      padding: 10px 14px;
       border-radius: 100px;
-      transition: all 0.2s var(--ease-smooth);
+      transition: all 0.25s var(--ease-smooth);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       font-weight: 600;
+      flex: 1;
     }
 
     .mobile-nav a svg {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.25s var(--ease-smooth);
     }
 
     .mobile-nav a.active {
       color: var(--gold);
-      background: rgba(212, 165, 116, 0.1);
+      background: rgba(212, 165, 116, 0.15);
     }
 
-    /* Photo fallback */
+    .mobile-nav a.active svg {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 8px rgba(212, 165, 116, 0.6));
+    }
+
     .photo-fallback {
       width: 100%;
       height: 100%;
@@ -1859,7 +1937,6 @@
       font-weight: 700;
     }
 
-    /* Vignette */
     .vignette {
       position: fixed;
       inset: 0;
@@ -1868,10 +1945,10 @@
       background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 
-    /* UNIVERSAL MEDIA QUERIES */
+    /* ============ MEDIA QUERIES ============ */
     @media (max-width: 479px) {
       body {
-        padding-bottom: 90px;
+        padding-bottom: 110px;
         cursor: auto;
         font-size: 17px;
       }
@@ -1954,8 +2031,10 @@
         padding: 60px 20px;
       }
 
+      /* BIGGER PHOTOS ON MOBILE */
       .cast-photo-wrap {
-        max-width: 300px;
+        max-width: 360px;
+        width: 90%;
       }
 
       .cast-name {
@@ -2071,11 +2150,30 @@
       .footer-motto {
         font-size: 1.05rem;
       }
+
+      /* Modal mobile adjustments */
+      .photo-modal {
+        padding: 20px 15px;
+      }
+
+      .photo-modal-close {
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+      }
+
+      .photo-modal-caption {
+        bottom: 20px;
+        font-size: 0.7rem;
+        padding: 8px 18px;
+      }
     }
 
     @media (min-width: 480px) and (max-width: 767px) {
       body {
-        padding-bottom: 90px;
+        padding-bottom: 110px;
         cursor: auto;
         font-size: 18px;
       }
@@ -2126,7 +2224,8 @@
       }
 
       .cast-photo-wrap {
-        max-width: 340px;
+        max-width: 400px;
+        width: 85%;
       }
 
       footer {
@@ -2515,7 +2614,8 @@
       .scroll-progress,
       .chapter-indicator,
       .mobile-nav,
-      .intro {
+      .intro,
+      .photo-modal {
         display: none !important;
       }
 
@@ -2533,6 +2633,13 @@
 </head>
 
 <body>
+  <!-- ============ PHOTO LIGHTBOX MODAL ============ -->
+  <div class="photo-modal" id="photoModal">
+    <button class="photo-modal-close" id="photoModalClose" aria-label="Close">✕</button>
+    <img class="photo-modal-image" id="photoModalImage" src="" alt="">
+    <div class="photo-modal-caption" id="photoModalCaption"></div>
+  </div>
+
   <!-- ROYAL INTRO -->
   <div class="intro" id="intro">
     <div class="intro-ornament">
@@ -2567,16 +2674,12 @@
     <div class="intro-chapter">One More Chapter Disclosed</div>
   </div>
 
-  <!-- Cinematic Effects -->
   <div class="grain"></div>
   <div class="vignette"></div>
   <div class="scroll-progress" id="progress"></div>
-
-  <!-- Custom Cursor -->
   <div class="cursor-ring" id="cursorRing"></div>
   <div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- Chapter Indicator -->
   <div class="chapter-indicator">
     <div class="chapter-dot active" data-label="Opening" data-target="hero"></div>
     <div class="chapter-dot" data-label="Protagonist" data-target="about"></div>
@@ -2585,7 +2688,6 @@
     <div class="chapter-dot" data-label="Finale" data-target="finale"></div>
   </div>
 
-  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-bg"></div>
     <div class="hero-watermark">AS</div>
@@ -2609,7 +2711,6 @@
     </div>
   </section>
 
-  <!-- CHAPTER 01 -->
   <div class="chapter-divider reveal">
     <div class="chapter-crown">♛</div>
     <div class="chapter-number">I</div>
@@ -2622,12 +2723,11 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="cast-wrapper">
       <div class="cast-grid" style="margin-top: 0;">
         <div class="cast-member reveal">
-          <div class="cast-photo-wrap">
+          <div class="cast-photo-wrap" data-caption="Smit Ashokbhai Anaghan">
             <img src="photo.png" alt="Anaghan Smit" class="cast-photo" onerror="this.outerHTML='<div class=photo-fallback>AS</div>'">
             <div class="cast-role">The Protagonist</div>
           </div>
@@ -2643,23 +2743,18 @@
                 <span class="cast-detail-key">Date of Birth</span><span class="cast-detail-value">16 / 10 / 2002</span>
               </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Age</span><span class="cast-detail-value">23 Years</span>
-              </div>
+                <span class="cast-detail-key">Age</span><span class="cast-detail-value">23 Years</span></div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Height</span><span class="cast-detail-value">5'6"</span>
-              </div>
+                <span class="cast-detail-key">Height</span><span class="cast-detail-value">5'6"</span></div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Blood Group</span><span class="cast-detail-value">B+</span>
-              </div>
+                <span class="cast-detail-key">Blood Group</span><span class="cast-detail-value">B+</span></div>
               <div class="cast-detail">
                 <span class="cast-detail-key">Marital Status</span><span class="cast-detail-value">Unmarried</span>
               </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Religion</span><span class="cast-detail-value">Hindu</span>
-              </div>
+                <span class="cast-detail-key">Religion</span><span class="cast-detail-value">Hindu</span></div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Caste</span><span class="cast-detail-value">Patel (Leuva)</span>
-              </div>
+                <span class="cast-detail-key">Caste</span><span class="cast-detail-value">Patel (Leuva)</span></div>
               <div class="cast-detail">
                 <span class="cast-detail-key">Hobbies</span><span class="cast-detail-value">Travel, Music, Driving, Dance, Movie, Editing, Cricket, Table-Tennis, Garba</span>
               </div>
@@ -2670,7 +2765,6 @@
     </div>
   </section>
 
-  <!-- PULLQUOTE -->
   <div class="pullquote reveal">
     <div class="pullquote-ornament-top">
       <span class="line"></span>
@@ -2688,7 +2782,6 @@
     </div>
   </div>
 
-  <!-- CHAPTER 02 -->
   <div class="chapter-divider reveal">
     <div class="chapter-crown">♛</div>
     <div class="chapter-number">II</div>
@@ -2701,12 +2794,11 @@
     </div>
   </div>
 
-  <!-- FAMILY -->
   <section id="cast">
     <div class="cast-wrapper">
       <div class="cast-grid">
         <div class="cast-member reveal">
-          <div class="cast-photo-wrap">
+          <div class="cast-photo-wrap" data-caption="Mr. Ashokbhai Ganeshbhai Anaghan">
             <img src="father-photo.jpg" alt="Father" class="cast-photo" onerror="this.outerHTML='<div class=photo-fallback>Father</div>'">
             <div class="cast-role">The Father</div>
           </div>
@@ -2724,7 +2816,7 @@
         </div>
 
         <div class="cast-member reveal">
-          <div class="cast-photo-wrap">
+          <div class="cast-photo-wrap" data-caption="Mrs. Jayshriben Ashokbhai Anaghan">
             <img src="mother-photo.jpg" alt="Mother" class="cast-photo" onerror="this.outerHTML='<div class=photo-fallback>Mother</div>'">
             <div class="cast-role">The Mother</div>
           </div>
@@ -2735,14 +2827,13 @@
               family.</p>
             <div class="cast-details">
               <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">House Wife</span>
-              </div>
+                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">House Wife</span></div>
             </div>
           </div>
         </div>
 
         <div class="cast-member reveal">
-          <div class="cast-photo-wrap">
+          <div class="cast-photo-wrap" data-caption="Mr. Darshil Ashokbhai Anaghan">
             <img src="brother-photo.jpg" alt="Brother" class="cast-photo" onerror="this.outerHTML='<div class=photo-fallback>Brother</div>'">
             <div class="cast-role">The Brother</div>
           </div>
@@ -2759,8 +2850,7 @@
                 <span class="cast-detail-key">Education</span><span class="cast-detail-value">Master in International Business Management</span>
               </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Status</span><span class="cast-detail-value">Unmarried</span>
-              </div>
+                <span class="cast-detail-key">Status</span><span class="cast-detail-value">Unmarried</span></div>
             </div>
           </div>
         </div>
@@ -2768,7 +2858,6 @@
     </div>
   </section>
 
-  <!-- CHAPTER 03 -->
   <div class="chapter-divider reveal">
     <div class="chapter-crown">♛</div>
     <div class="chapter-number">III</div>
@@ -2781,7 +2870,6 @@
     </div>
   </div>
 
-  <!-- JOURNEY -->
   <section id="journey">
     <div class="timeline-wrapper">
       <div class="timeline">
@@ -2795,11 +2883,9 @@
             applications, building the technical bedrock for future endeavors.</p>
           <div class="timeline-meta">
             <div class="meta-row">
-              <span class="key">Degree</span><span class="value">Bachelor of Computer Applications</span>
-            </div>
+              <span class="key">Degree</span><span class="value">Bachelor of Computer Applications</span></div>
             <div class="meta-row">
-              <span class="key">University</span><span class="value">Veer Narmad South Gujarat University</span>
-            </div>
+              <span class="key">University</span><span class="value">Veer Narmad South Gujarat University</span></div>
             <div class="meta-row"><span class="key">Status</span><span class="value">Completed</span></div>
           </div>
         </div>
@@ -2828,8 +2914,7 @@
             generation while serving real clients with real results.</p>
           <div class="timeline-meta">
             <div class="meta-row">
-              <span class="key">Venture</span><span class="value">Nexus Institute & Digital Agency</span>
-            </div>
+              <span class="key">Venture</span><span class="value">Nexus Institute & Digital Agency</span></div>
             <div class="meta-row"><span class="key">Location</span><span class="value">Sarthana Jakatnaka, Surat</span>
             </div>
             <div class="meta-row"><span class="key">Role</span><span class="value">Founder & Lead Trainer</span></div>
@@ -2839,7 +2924,6 @@
     </div>
   </section>
 
-  <!-- CHAPTER 04 -->
   <div class="chapter-divider reveal">
     <div class="chapter-crown">♛</div>
     <div class="chapter-number">IV</div>
@@ -2852,7 +2936,6 @@
     </div>
   </div>
 
-  <!-- CONTACT -->
   <section id="finale" class="finale">
     <div class="finale-bg"></div>
     <div class="finale-watermark">♛</div>
@@ -2925,7 +3008,7 @@
     <div class="footer-motto">"Vincit Qui Se Vincit" — He conquers who conquers himself</div>
   </footer>
 
-  <!-- Mobile Nav -->
+  <!-- GLASS MOBILE NAV -->
   <nav class="mobile-nav">
     <a href="#hero" class="active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2966,7 +3049,61 @@
   </nav>
 
   <script>
-    // Custom Cursor
+    // ============ PHOTO LIGHTBOX ============
+    const photoModal = document.getElementById('photoModal');
+    const photoModalImage = document.getElementById('photoModalImage');
+    const photoModalCaption = document.getElementById('photoModalCaption');
+    const photoModalClose = document.getElementById('photoModalClose');
+
+    function openPhotoModal(imgSrc, imgAlt, caption) {
+      photoModalImage.src = imgSrc;
+      photoModalImage.alt = imgAlt;
+      photoModalCaption.textContent = caption || imgAlt;
+      photoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoModal() {
+      photoModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Attach click to all photo wraps
+    document.querySelectorAll('.cast-photo-wrap').forEach(wrap => {
+      wrap.addEventListener('click', () => {
+        const img = wrap.querySelector('img');
+        const fallback = wrap.querySelector('.photo-fallback');
+        const caption = wrap.dataset.caption || '';
+        
+        if (img) {
+          openPhotoModal(img.src, img.alt, caption);
+        } else if (fallback) {
+          // For fallback, don't open modal
+          return;
+        }
+      });
+    });
+
+    // Close modal
+    photoModalClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closePhotoModal();
+    });
+
+    photoModal.addEventListener('click', (e) => {
+      if (e.target === photoModal) {
+        closePhotoModal();
+      }
+    });
+
+    // ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && photoModal.classList.contains('active')) {
+        closePhotoModal();
+      }
+    });
+
+    // ============ CURSOR ============
     const ring = document.getElementById('cursorRing');
     const dot = document.getElementById('cursorDot');
     let mx = 0, my = 0, rx = 0, ry = 0;
@@ -2987,12 +3124,12 @@
     }
     animateCursor();
 
-    document.querySelectorAll('a, button, .cast-detail, .contact-row').forEach(el => {
+    document.querySelectorAll('a, button, .cast-detail, .contact-row, .cast-photo-wrap').forEach(el => {
       el.addEventListener('mouseenter', () => ring.classList.add('hover'));
       el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
     });
 
-    // Intro - Faster (2.5s)
+    // ============ INTRO ============
     const intro = document.getElementById('intro');
     setTimeout(() => intro.classList.add('hidden'), 2500);
     document.addEventListener('click', () => {
@@ -3001,7 +3138,7 @@
       }
     }, { once: true });
 
-    // Scroll Progress
+    // ============ SCROLL PROGRESS ============
     const progress = document.getElementById('progress');
     window.addEventListener('scroll', () => {
       const h = document.documentElement;
@@ -3009,7 +3146,7 @@
       progress.style.width = p + '%';
     });
 
-    // Enhanced Reveal Observer
+    // ============ REVEAL OBSERVER ============
     const revealObs = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -3025,7 +3162,6 @@
       revealObs.observe(el);
     });
 
-    // Timeline markers
     const timelineObs = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) e.target.classList.add('in-view');
@@ -3034,7 +3170,7 @@
 
     document.querySelectorAll('.timeline-item').forEach(el => timelineObs.observe(el));
 
-    // Chapter dots
+    // ============ CHAPTER DOTS ============
     const chapters = document.querySelectorAll('.chapter-dot');
     const sections = ['hero', 'about', 'cast', 'journey', 'finale'];
 
@@ -3053,7 +3189,6 @@
       });
     });
 
-    // Chapter dot click
     chapters.forEach(dot => {
       dot.addEventListener('click', () => {
         const target = document.getElementById(dot.dataset.target);
@@ -3066,7 +3201,7 @@
       });
     });
 
-    // Smooth scroll
+    // ============ SMOOTH SCROLL ============
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -3080,7 +3215,7 @@
       });
     });
 
-    // Parallax on hero - faster
+    // ============ PARALLAX ============
     const heroContent = document.querySelector('.hero-content');
     window.addEventListener('scroll', () => {
       if (window.scrollY < window.innerHeight) {
