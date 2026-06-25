@@ -839,6 +839,7 @@
       opacity: 0;
       transform: scale(0.9);
       transition: all 0.6s var(--ease-smooth) 0.1s;
+      background: var(--bg-warm);
     }
 
     .cast-member.in-view .cast-photo-wrap {
@@ -846,18 +847,19 @@
       transform: scale(1);
     }
 
+    /* FIXED: Photo now shows completely without cropping */
     .cast-photo {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      filter: sepia(20%) grayscale(40%) contrast(1.05);
-      transition: all 0.4s var(--ease-smooth);
+      object-fit: contain;
+      /* Changed from cover to contain */
+      object-position: center;
+      background: var(--bg-warm);
+      /* Removed all filter effects */
     }
 
-    .cast-member:hover .cast-photo {
-      filter: sepia(0%) grayscale(0%) contrast(1);
-      transform: scale(1.05);
-    }
+    /* REMOVED: Hover effects on photo */
+    /* .cast-member:hover .cast-photo { ... } - DELETED */
 
     .cast-photo-wrap::after {
       content: '';
@@ -2635,25 +2637,32 @@
             <p class="cast-desc"></p>
             <div class="cast-details">
               <div class="cast-detail">
-                <span class="cast-detail-key">Full Name</span><span class="cast-detail-value">Smit Ashokbhai Anaghan</span></div>
+                <span class="cast-detail-key">Full Name</span><span class="cast-detail-value">Smit Ashokbhai Anaghan</span>
+              </div>
               <div class="cast-detail">
                 <span class="cast-detail-key">Date of Birth</span><span class="cast-detail-value">16 / 10 / 2002</span>
               </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Age</span><span class="cast-detail-value">23 Years</span></div>
+                <span class="cast-detail-key">Age</span><span class="cast-detail-value">23 Years</span>
+              </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Height</span><span class="cast-detail-value">5'6"</span></div>
+                <span class="cast-detail-key">Height</span><span class="cast-detail-value">5'6"</span>
+              </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Blood Group</span><span class="cast-detail-value">B+</span></div>
+                <span class="cast-detail-key">Blood Group</span><span class="cast-detail-value">B+</span>
+              </div>
               <div class="cast-detail">
                 <span class="cast-detail-key">Marital Status</span><span class="cast-detail-value">Unmarried</span>
               </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Religion</span><span class="cast-detail-value">Hindu</span></div>
+                <span class="cast-detail-key">Religion</span><span class="cast-detail-value">Hindu</span>
+              </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Caste</span><span class="cast-detail-value">Patel (Leuva)</span></div>
+                <span class="cast-detail-key">Caste</span><span class="cast-detail-value">Patel (Leuva)</span>
+              </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Hobbies</span><span class="cast-detail-value">Travel, Music, Driving, Dance, Movie, Editing, Cricket, Table-Tennis, Garba</span></div>
+                <span class="cast-detail-key">Hobbies</span><span class="cast-detail-value">Travel, Music, Driving, Dance, Movie, Editing, Cricket, Table-Tennis, Garba</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2708,7 +2717,8 @@
               dedication to his loved ones.</p>
             <div class="cast-details">
               <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Text-Tile Business</span></div>
+                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Text-Tile Business</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2725,7 +2735,8 @@
               family.</p>
             <div class="cast-details">
               <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">House Wife</span></div>
+                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">House Wife</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2742,11 +2753,14 @@
               bond of brotherhood.</p>
             <div class="cast-details">
               <div class="cast-detail">
-                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Work in Business Management</span></div>
+                <span class="cast-detail-key">Occupation</span><span class="cast-detail-value">Work in Business Management</span>
+              </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Education</span><span class="cast-detail-value">Master in International Business Management</span></div>
+                <span class="cast-detail-key">Education</span><span class="cast-detail-value">Master in International Business Management</span>
+              </div>
               <div class="cast-detail">
-                <span class="cast-detail-key">Status</span><span class="cast-detail-value">Unmarried</span></div>
+                <span class="cast-detail-key">Status</span><span class="cast-detail-value">Unmarried</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2781,9 +2795,11 @@
             applications, building the technical bedrock for future endeavors.</p>
           <div class="timeline-meta">
             <div class="meta-row">
-              <span class="key">Degree</span><span class="value">Bachelor of Computer Applications</span></div>
+              <span class="key">Degree</span><span class="value">Bachelor of Computer Applications</span>
+            </div>
             <div class="meta-row">
-              <span class="key">University</span><span class="value">Veer Narmad South Gujarat University</span></div>
+              <span class="key">University</span><span class="value">Veer Narmad South Gujarat University</span>
+            </div>
             <div class="meta-row"><span class="key">Status</span><span class="value">Completed</span></div>
           </div>
         </div>
@@ -2797,7 +2813,8 @@
           <div class="timeline-meta">
             <div class="meta-row"><span class="key">Focus</span><span class="value">SMM, Meta Ads, Google Ads, AI</span>
             </div>
-            <div class="meta-row"><span class="key">Specialty</span><span class="value">Social Media Marketing, Performance Marketing</span>
+            <div class="meta-row">
+              <span class="key">Specialty</span><span class="value">Social Media Marketing, Performance Marketing</span>
             </div>
             <div class="meta-row"><span class="key">Status</span><span class="value">Completed</span></div>
           </div>
@@ -2811,7 +2828,8 @@
             generation while serving real clients with real results.</p>
           <div class="timeline-meta">
             <div class="meta-row">
-              <span class="key">Venture</span><span class="value">Nexus Institute & Digital Agency</span></div>
+              <span class="key">Venture</span><span class="value">Nexus Institute & Digital Agency</span>
+            </div>
             <div class="meta-row"><span class="key">Location</span><span class="value">Sarthana Jakatnaka, Surat</span>
             </div>
             <div class="meta-row"><span class="key">Role</span><span class="value">Founder & Lead Trainer</span></div>
@@ -2876,8 +2894,8 @@
           <div class="contact-arrow">→</div>
         </a>
 
-        <a href="https://www.google.com/maps/place/Hans+Society,+Varachha,+Surat,+Gujarat+395006/@21.210829,72.8530985,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f03a14418eb:0x912ca367a87a6a2d!8m2!3d21.2107565!4d72.8556096!16s%2Fg%2F1jkz5_ltk?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank"
-          class="contact-row reveal">
+        <a href="https://www.google.com/maps/place/Hans+Society,+Varachha,+Surat,+Gujarat+395006/@21.210829,72.8530985,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f03a14418eb:0x912ca367a87a6a2d!8m2!3d21.2107565!4d72.8556096!16s%2Fg%2F1jkz5_ltk?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" class="contact-row reveal">
           <div class="contact-left">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
@@ -2949,129 +2967,129 @@
 
   <script>
     // Custom Cursor
-const ring = document.getElementById('cursorRing');
-const dot = document.getElementById('cursorDot');
-let mx = 0, my = 0, rx = 0, ry = 0;
+    const ring = document.getElementById('cursorRing');
+    const dot = document.getElementById('cursorDot');
+    let mx = 0, my = 0, rx = 0, ry = 0;
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX;
-  my = e.clientY;
-  dot.style.left = mx + 'px';
-  dot.style.top = my + 'px';
-});
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX;
+      my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top = my + 'px';
+    });
 
-function animateCursor() {
-  rx += (mx - rx) * 0.2;
-  ry += (my - ry) * 0.2;
-  ring.style.left = rx + 'px';
-  ring.style.top = ry + 'px';
-  requestAnimationFrame(animateCursor);
-}
-animateCursor();
-
-document.querySelectorAll('a, button, .cast-detail, .contact-row').forEach(el => {
-  el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-  el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-});
-
-// Intro - Faster (2.5s)
-const intro = document.getElementById('intro');
-setTimeout(() => intro.classList.add('hidden'), 2500);
-document.addEventListener('click', () => {
-  if (!intro.classList.contains('hidden')) {
-    intro.classList.add('hidden');
-  }
-}, { once: true });
-
-// Scroll Progress
-const progress = document.getElementById('progress');
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  const p = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-  progress.style.width = p + '%';
-});
-
-// Enhanced Reveal Observer
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in-view');
+    function animateCursor() {
+      rx += (mx - rx) * 0.2;
+      ry += (my - ry) * 0.2;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateCursor);
     }
-  });
-}, { 
-  threshold: 0.15, 
-  rootMargin: '0px 0px -50px 0px' 
-});
+    animateCursor();
 
-document.querySelectorAll('.reveal, .chapter-crown, .chapter-number, .chapter-title, .chapter-subtitle, .chapter-ornament, .cast-member, .pullquote-ornament-top, .pullquote-text, .pullquote-ornament-bottom, .pullquote-attr, .timeline-line, .timeline-item, .finale-title, .finale-subtitle, .contact-rows, .contact-row, .footer-ornament, .footer-credits, .footer-title, .footer-motto').forEach(el => {
-  revealObs.observe(el);
-});
+    document.querySelectorAll('a, button, .cast-detail, .contact-row').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+    });
 
-// Timeline markers
-const timelineObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('in-view');
-  });
-}, { threshold: 0.3 });
+    // Intro - Faster (2.5s)
+    const intro = document.getElementById('intro');
+    setTimeout(() => intro.classList.add('hidden'), 2500);
+    document.addEventListener('click', () => {
+      if (!intro.classList.contains('hidden')) {
+        intro.classList.add('hidden');
+      }
+    }, { once: true });
 
-document.querySelectorAll('.timeline-item').forEach(el => timelineObs.observe(el));
+    // Scroll Progress
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const p = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      progress.style.width = p + '%';
+    });
 
-// Chapter dots
-const chapters = document.querySelectorAll('.chapter-dot');
-const sections = ['hero', 'about', 'cast', 'journey', 'finale'];
-
-window.addEventListener('scroll', () => {
-  let current = 0;
-  sections.forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el && window.scrollY >= el.offsetTop - 300) current = i;
-  });
-  chapters.forEach((dot, i) => {
-    dot.classList.toggle('active', i === current);
-  });
-  
-  document.querySelectorAll('.mobile-nav a').forEach((link, i) => {
-    link.classList.toggle('active', i === current);
-  });
-});
-
-// Chapter dot click
-chapters.forEach(dot => {
-  dot.addEventListener('click', () => {
-    const target = document.getElementById(dot.dataset.target);
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 50,
-        behavior: 'smooth'
+    // Enhanced Reveal Observer
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+        }
       });
-    }
-  });
-});
+    }, { 
+      threshold: 0.15, 
+      rootMargin: '0px 0px -50px 0px' 
+    });
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 50,
-        behavior: 'smooth'
+    document.querySelectorAll('.reveal, .chapter-crown, .chapter-number, .chapter-title, .chapter-subtitle, .chapter-ornament, .cast-member, .pullquote-ornament-top, .pullquote-text, .pullquote-ornament-bottom, .pullquote-attr, .timeline-line, .timeline-item, .finale-title, .finale-subtitle, .contact-rows, .contact-row, .footer-ornament, .footer-credits, .footer-title, .footer-motto').forEach(el => {
+      revealObs.observe(el);
+    });
+
+    // Timeline markers
+    const timelineObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('in-view');
       });
-    }
-  });
-});
+    }, { threshold: 0.3 });
 
-// Parallax on hero - faster
-const heroContent = document.querySelector('.hero-content');
-window.addEventListener('scroll', () => {
-  if (window.scrollY < window.innerHeight) {
-    const o = 1 - (window.scrollY / window.innerHeight);
-    const t = window.scrollY * 0.3;
-    heroContent.style.opacity = o;
-    heroContent.style.transform = `translateY(${t}px)`;
-  }
-});
+    document.querySelectorAll('.timeline-item').forEach(el => timelineObs.observe(el));
+
+    // Chapter dots
+    const chapters = document.querySelectorAll('.chapter-dot');
+    const sections = ['hero', 'about', 'cast', 'journey', 'finale'];
+
+    window.addEventListener('scroll', () => {
+      let current = 0;
+      sections.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 300) current = i;
+      });
+      chapters.forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+      });
+      
+      document.querySelectorAll('.mobile-nav a').forEach((link, i) => {
+        link.classList.toggle('active', i === current);
+      });
+    });
+
+    // Chapter dot click
+    chapters.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = document.getElementById(dot.dataset.target);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 50,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 50,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Parallax on hero - faster
+    const heroContent = document.querySelector('.hero-content');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < window.innerHeight) {
+        const o = 1 - (window.scrollY / window.innerHeight);
+        const t = window.scrollY * 0.3;
+        heroContent.style.opacity = o;
+        heroContent.style.transform = `translateY(${t}px)`;
+      }
+    });
   </script>
 </body>
 </html>
